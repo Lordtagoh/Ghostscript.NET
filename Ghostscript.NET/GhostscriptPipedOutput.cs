@@ -102,7 +102,7 @@ namespace Ghostscript.NET
                         // for some reason at this point the handle is invalid for real.
                         // DisposeLocalCopyOfClientHandle should be called instead, but it 
                         // throws an exception saying that the handle is invalid pointing to 
-                        // CloseHandle method in the dissasembled code.
+                        // CloseHandle method in the disassembled code.
                         // this is a workaround, if we don't set the handle as invalid, when
                         // garbage collector tries to dispose this handle, exception is thrown
                         _pipe.ClientSafePipeHandle.SetHandleAsInvalid();
@@ -115,8 +115,10 @@ namespace Ghostscript.NET
                         // check if the thread is still running
                         if (_thread.ThreadState == ThreadState.Running)
                         {
+#if !NET5_0 && !NET6_0
                             // abort the thread
                             _thread.Abort();
+#endif
                         }
 
                         _thread = null;
@@ -161,7 +163,7 @@ namespace Ghostscript.NET
 
                 int readCount = 0;
 
-                // read untill we have something to read
+                // read until we have something to read
                 while ((readCount = reader.Read(buffer, 0, buffer.Length)) > 0)
                 {
                     // write the output to our local memory stream
