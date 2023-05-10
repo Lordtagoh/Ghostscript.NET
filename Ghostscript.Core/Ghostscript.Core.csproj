@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;netcoreapp3.1;net5.0-windows;net6.0-windows;net7.0-windows;net4;net461;net47;net471;net472</TargetFrameworks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<AssemblyName>Ghostscript.Net.Core</AssemblyName>
+		<Company>Habjan</Company>
+		<Copyright>.NET Core Branch by Daniel Porrey. Copyright © 2013-2022 by Josip Habjan (habjan@gmail.com). All Rights Reserved.</Copyright>
+		<Description>Managed wrapper library around the Ghostscript native library (32-bit &amp; 64-bit), an interpreter for the PostScript language, PDF, related software and documentation. Upgraded by Daniel Porrey for .NET Core</Description>
+		<Authors>Habjan,Porrey</Authors>
+		<Product>Ghostscript.Core</Product>
+		<Version>1.5.0-preview-1.0.0</Version>
+		<FileVersion>1.5.0</FileVersion>
+		<AssemblyVersion>1.5.0</AssemblyVersion>
+		<PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/porrey/Ghostscript.NETCoreNET</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/porrey/Ghostscript.NET.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageId>Ghostscript.Core</PackageId>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageTags>.NET ghostscript pdf conversion image</PackageTags>
+		<PackageReleaseNotes>Added compatibility for .NET Standard, .NET Core and .NET 5, 6 &amp; 7</PackageReleaseNotes>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+		<Nullable>disable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+	</PropertyGroup>
+
+	<PropertyGroup>
+	  <NoWarn>1701;1702;1591</NoWarn>
+	  <Title>Ghostscript.NET for .NET Core</Title>
+	  <NeutralLanguage>en</NeutralLanguage>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	
+	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' or '$(TargetFramework)' == 'netcoreapp3.1' or '$(TargetFramework)' == 'net5.0-windows'">
+		<PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+		<PackageReference Include="System.Drawing.Common" Version="5.0.3" />
+		<PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net6.0-windows'">
+		<PackageReference Include="Microsoft.Win32.Registry" Version="6.0.0-preview.5.21301.5" />
+		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+		<PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net7.0-windows'">
+		<PackageReference Include="Microsoft.Win32.Registry" Version="6.0.0-preview.5.21301.5" />
+		<PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+		<PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+		<None Include="..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+</Project>
