@@ -1,6 +1,6 @@
-**Ghostscript.NET** - (written in C#) is the most completed managed wrapper library around the Ghostscript library (32-bit & 64-bit), an interpreter for the PostScript language, PDF, related software and documentation.
+**Ghostscript.Core** - (written in C#) is the most completed managed wrapper library around the Ghostscript library (32-bit & 64-bit), an interpreter for the PostScript language, PDF, related software and documentation.
 
-[**NuGet: PM> Install-Package Ghostscript.NET**](http://nuget.org/packages/Ghostscript.NET/)
+[**NuGet: PM> Install-Package Ghostscript.Core**](http://nuget.org/packages/Ghostscript.Core/)
 
 **Contains**
  * GhostscriptViewer - View PDF, EPS or multi-page PostScript files on the screen
@@ -26,23 +26,16 @@
  * fixed CurrentPage -> TotalPages logging.
  * fixed watermark transparency bug for PDF.
  
-[If you have found **Ghostscript.NET** useful and has contributed to your project **consider donating**. Donating helps support **Ghostscript.NET**.](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GS6S7RCAB7KAQ)
-
-[<img src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" alt="Click here to lend your support to: Ghostscript.NET and make a donation at pledgie.com !" />](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GS6S7RCAB7KAQ)
-
 **LICENSE**
 
- Ghostscript.NET is distributed under the GNU Affero General Public License (see COPYING file).
+ Ghostscript.Core is distributed under the GNU Affero General Public License (see COPYING file).
 
-Josip Habjan (habjan@gmail.com)
+**Samples built on the top of the Ghostscript.Core library**
 
+Direct postscript interpretation via Ghostscript.Core:
 
-**Samples built on the top of the Ghostscript.NET library**
+![Ghostscript.Core.Display](https://i.ibb.co/Fnk8rFP/ss-jj-1899.png)
 
-Direct postscript interpretation via Ghostscript.NET:
+Ghostscript.Core.Viewer (supports viewing of the PDF, EPS and multi-page PS files):
 
-![Ghostscript.NET.Display](https://i.ibb.co/Fnk8rFP/ss-jj-1899.png)
-
-Ghostscript.NET.Viewer (supports viewing of the PDF, EPS and multi-page PS files):
-
-![Ghostscript.NET.Viewer](http://a.fsdn.com/con/app/proj/ghostscriptnet/screenshots/gs-net-render.png)
+![Ghostscript.Core.Viewer](http://a.fsdn.com/con/app/proj/ghostscriptnet/screenshots/gs-net-render.png)
