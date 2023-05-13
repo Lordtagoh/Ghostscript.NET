@@ -12,7 +12,7 @@
 		<Description>Managed wrapper library around the Ghostscript native library (32-bit &amp; 64-bit), an interpreter for the PostScript language, PDF, related software and documentation. Upgraded by Daniel Porrey for .NET Core</Description>
 		<Authors>Habjan,Porrey</Authors>
 		<Product>Ghostscript.Core</Product>
-		<Version>1.5.0-preview-1.0.0</Version>
+		<Version>1.5.0-preview-1.0.1</Version>
 		<FileVersion>1.5.0</FileVersion>
 		<AssemblyVersion>1.5.0</AssemblyVersion>
 		<PackageLicenseExpression>AGPL-3.0-only</PackageLicenseExpression>
@@ -20,7 +20,7 @@
 		<RepositoryUrl>https://github.com/porrey/Ghostscript.NET.git</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageId>Ghostscript.Core</PackageId>
-		<PackageIcon>icon.png</PackageIcon>
+		<PackageIcon>Ghostscript.Core.png</PackageIcon>
 		<PackageTags>.NET ghostscript pdf conversion image</PackageTags>
 		<PackageReleaseNotes>Added compatibility for .NET Standard, .NET Core and .NET 5, 6 &amp; 7</PackageReleaseNotes>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -63,7 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\icon.png">
+		<None Include="..\Ghostscript.Core.png">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>
