@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-windows</TargetFrameworks>
+		<TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -75,5 +75,6 @@
 
 	<ItemGroup>
 	  <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
+	  <PackageReference Include="System.Drawing.Common" Version="8.0.8" />
 	</ItemGroup>
 </Project>
