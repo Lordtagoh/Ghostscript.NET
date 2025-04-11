@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFramework>net9.0-windows</TargetFramework>
 		<Nullable>disable</Nullable>
 		<OutputType>WinExe</OutputType>
 		<Copyright>Copyright © 2013-2021 Josip Habjan (habjan@gmail.com)</Copyright>
@@ -19,7 +19,7 @@
 	  </Content>
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="System.Drawing.Common" Version="8.0.1" />
+	  <PackageReference Include="System.Drawing.Common" Version="9.0.2" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\Ghostscript.Core\Ghostscript.Core.csproj" />
